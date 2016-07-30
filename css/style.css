@@ -68,7 +68,6 @@ h1 {
 .contactform {
 	background-color: black;
   color: #ccc;
-
 }
 
 .contactform h2 {
@@ -100,15 +99,6 @@ h1 {
 	font-size: 1.3em;
 }
 
-/* Not used */
-.divider-vertical {
-	height: 500px;
-	border-right: 1px solid #ccc;
-}
-
-form {
-}
-
 .footer {
   position: absolute;
   width: 100%;
@@ -133,4 +123,34 @@ footer a {
 footer a:hover, footer a:active {
   text-decoration: none;
   color: #aaa;
+}
+
+@media (max-width: 767px) {
+  .contactform h2 {
+    margin: 0 75px 20px 75px;
+  }
+
+  .contactform ul {
+    display: inline-block;
+    margin: 10px 50px 50px 50px;
+    width: 250px;
+  }
+
+  .contactform li {
+    display: block;
+    float: left;
+    clear: both;
+    margin-bottom: 5px;
+  }
+
+  .contactform .social-media {
+    width: 35px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  .contactform form {
+    margin: 0 75px;
+    width: 100%;
+  }  
 }
