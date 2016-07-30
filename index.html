@@ -60,7 +60,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6">
-            <img src="images/sav.jpg" class="img-responsive" alt="Picture of Savanna">
+            <img src="images/sav.jpg" class="img-circle img-responsive" alt="Picture of Savanna">
           </div>
           <div class="col-md-6 surround">
             <h1><strong>Savanna Baxter</strong></h1>
@@ -84,7 +84,7 @@
         <div class="col-sm-6 col-md-4">
 
           <div class="thumbnail">
-            <img src="images/udemysignup.JPG" class="img-responsive" alt="Udemy Sign Up Form Project Image">
+            <img src="images/udemysignup.JPG" class="img-thumbnail img-responsive" alt="Udemy Sign Up Form Project Image">
             <div class="caption">
               <h3>Sign Up Form</h3>
               <p>Udemy course on HTML5/CSS3 with customized search bar and form.</p> 
@@ -93,7 +93,7 @@
             </div>
           </div>  
           <div class="thumbnail">
-            <img src="images/keypadchecker.JPG" class="img-responsive" alt="Keypad Checker Project Image">
+            <img src="images/keypadchecker.JPG" class="img-thumbnail img-responsive" alt="Keypad Checker Project Image">
             <div class="caption">
               <h3>Keypad Checker</h3>
               <p>Iron Yard course to create a keypad. Mostly focused on JavaScript.</p> 
@@ -106,7 +106,7 @@
         <div class="col-sm-6 col-md-4">
 
           <div class="thumbnail">
-            <img src="images/zebra.JPG" class="img-responsive" alt="Zebra Portfolio Project Image">
+            <img src="images/zebra.JPG" class="img-thumbnail img-responsive" alt="Zebra Portfolio Project Image">
             <div class="caption">
               <h3>Zebra Site</h3>
               <p>Girl Develop It HTML/CSS intermediate course creating a personal site for a zebra.</p> 
@@ -115,7 +115,7 @@
             </div>
           </div>   
           <div class="thumbnail">
-            <img src="images/zenvadashboard.JPG" class="img-responsive" alt="Zenva Dashboard Project Image">
+            <img src="images/zenvadashboard.JPG" class="img-thumbnail img-responsive" alt="Zenva Dashboard Project Image">
             <div class="caption">
               <h3>Dashboard</h3>
               <p>Zenva course on basic HTML/CSS to create a dashboard. Partly responsive.</p> 
@@ -128,7 +128,7 @@
         <div class="col-sm-6 col-md-4">
 
           <div class="thumbnail">
-            <img src="images/gracehoppertribute.JPG" class="img-responsive" alt="Grace Hopper Tribute Project Image">
+            <img src="images/gracehoppertribute.JPG" class="img-thumbnail img-responsive" alt="Grace Hopper Tribute Project Image">
             <div class="caption">
               <h3>Grace Hopper Tribute</h3>
               <p>Tribute page to Grace Hopper using Bootstrap and body background image.</p> 
@@ -143,43 +143,46 @@
     <div class="container-fluid contactform">
       <h1 id="contact"><strong>Contact Me</strong></h1>    
       <div class="row">
-        <div class="col-xs-5 col-md-5">
+        <div class="col-xs-6 col-md-6">
           <h2><strong>Social Media</strong></h2>
           <ul class="list-unstyled">
-            <li><a href="https://www.linkedin.com/in/savannabaxter" target="_blank"><img src="images/linkedin.png" class="social-media" alt="LinkedIn link"/>Connect with me on LinkedIn</a>  </li>
+            <li><a href="https://www.linkedin.com/in/savannabaxter" target="_blank"><img src="images/linkedin.png" class="social-media" alt="LinkedIn link"/>Follow me on LinkedIn</a>  </li>
             <li><a href="https://github.com/srbaxter" target="_blank"><img src="images/github.png" class="social-media" alt="GitHub link"/>Follow me on GitHub</a></li>
             <li><a href="http://codepen.io/srbaxter/" target="_blank"><img src="images/codepen.png" class="social-media" alt="CodePen link"/>Follow me on CodePen</a></li>
             <li><a href="https://twitter.com/srosebaxter" target="_blank"><img src="images/twitter.png" class="social-media" alt="Twitter link"/>Follow me on Twitter</a></li>
             <li><a href="https://www.instagram.com/srosebaxter/" target="_blank"><img src="images/instagram.png" class="social-media" alt="Instagram link"/>Follow me on Instagram</a></li>
           </ul>         
         </div>
-        <div class="col-xs-1 col-md-1 divider-vertical">
-        </div>
+
+        <!-- Add the extra clearfix for only the required viewport -->
+        <div class="clearfix visible-xs-block"></div>
 
 <!-- Need to fix this going under the footer on smaller screens -->
-        <div class="col-xs-6 col-md-6">
-          <h2><strong>Email Me</strong></h2>
-          <form action="mailto:srosebaxter@gmail.com" class="text-left"> 
-            <div class="form-group col-xs-6 col-lg-6">
-              <label for="name">Name</label>
-              <input type="text" class="form-control" name="name" id="name">
-            </div>
-            <div class="form-group col-xs-6 col-lg-6"">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" name="email">
-            </div>
-            <div class="form-group col-xs-12 col-lg-12">
-              <label for="subject">Subject</label>
-              <input type="text" class="form-control" name="subject">
-            </div>
-            <div class="form-group col-xs-12 col-lg-12">
-              <label for="msg">Message</label>
-              <textarea class="form-control" name="msg" rows="5" cols="50" form="form"></textarea>
-            </div>
-            <div class="form-group col-xs-2 col-lg-2">
-              <button type="submit" class="btn btn-default">Send</button>
-            </div>
-          </form>            
+        <div class="col-xs-5 col-md-5">
+            <h2><strong>Email Me</strong></h2>
+            <form action="mailto:srosebaxter@gmail.com" class="text-left"> 
+            <div class="row">
+              <div class="form-group col-xs-6 col-md-6">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name" id="name">
+              </div>
+              <div class="form-group col-xs-6 col-md-6"">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email">
+              </div>
+              <div class="form-group col-xs-12 col-md-12">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" name="subject">
+              </div>
+              <div class="form-group col-xs-12 col-md-12">
+                <label for="msg">Message</label>
+                <textarea class="form-control" name="msg" rows="5" cols="50" form="form"></textarea>
+              </div>
+              <div class="form-group col-xs-2 col-md-2">
+                <button type="submit" class="btn btn-default">Send</button>
+              </div>
+            </form>     
+          </div>       
         </div><!--/.col-->        
       </div><!--/.row-->
     </div><!--/.contactform-->
