@@ -9,7 +9,7 @@ body {
 
 a {
   font-size: 1.3em;
-  color: #eee;
+  color: #aaa;
   text-decoration: none !important;
 }
 
@@ -96,6 +96,10 @@ h1 {
 	margin-right: 10px;
 }
 
+.contactform a:hover, .contactform a:active, .contactform a:visited {
+  color: #eee;
+}
+
 .footer {
   position: absolute;
   width: 100%;
@@ -118,8 +122,8 @@ footer a {
   font-size: 1em;
 }
 
-.contactform a:hover, .contactform a:active, .contactform a:visited {
-  color: #aaa;
+footer a:hover, footer a:active footer a:visited {
+  color: black;
 }
 
 @media (max-width: 767px) {
