@@ -7,8 +7,10 @@ body {
   background-color: #eee;
 }
 
-header a {
+a {
   font-size: 1.3em;
+  color: #eee;
+  text-decoration: none !important;
 }
 
 .vertical-align {
@@ -94,11 +96,6 @@ h1 {
 	margin-right: 10px;
 }
 
-.contactform a {
-	color: #eee;
-	font-size: 1.3em;
-}
-
 .footer {
   position: absolute;
   width: 100%;
@@ -118,10 +115,10 @@ footer nav li + li {
 
 footer a {
   color: #777;
+  font-size: 1em;
 }
 
-footer a:hover, footer a:active {
-  text-decoration: none;
+.contactform a:hover, .contactform a:active, .contactform a:visited {
   color: #aaa;
 }
 
