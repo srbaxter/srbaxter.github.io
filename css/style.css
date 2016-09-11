@@ -1,1 +1,185 @@
-.contactform h2,h1{font-family:Montserrat,sans-serif}html{position:relative;min-height:100%}body{background-color:#eee}a{color:#aaa;text-decoration:none!important;font-size:1.3em}.top a{font-size:1.8em}.vertical-align{display:flex;align-items:center}.aboutme{background:url(../images/petal.jpg) fixed;-webkit-background-size:cover;-moz-background-size:cover;-ms-background-size:cover;-o-background-size:cover;background-size:cover;color:#ccc;padding-right:1.2em;margin-top:-20px;margin-bottom:-10px}.aboutme img{width:500px;margin:0 auto}h1{color:#eee;font-size:5em;margin:30px 0 40px}.aboutme .surround{border:1px solid #fff;padding:5px 10px 30px;background-color:#111;background-color:rgba(0,0,0,.8)}.aboutme .social-media{width:50px;margin-top:25px;margin-left:10px}.portfolio h1{color:#000}.thumbnail{height:475px;font-size:1.2em}.thumbnail img{height:300px;width:550px}.contactform{background-color:#000;color:#ccc}.contactform h2{font-size:4em;margin-bottom:30px;color:#eee}.contactform ul{padding-top:10px;display:inline-block}.contactform li{display:block;float:left;clear:both;margin-bottom:5px}.contactform .social-media{width:35px;margin-bottom:10px;margin-right:10px}.contactform a:active,.contactform a:hover,.contactform a:visited{color:#eee}form{font-size:1.2em}.footer{position:absolute;width:100%;background-color:#f5f5f5;color:#777;font-size:1.5em}footer .row{padding-top:15px}footer nav li+li{margin-left:15px}footer a{color:#777;font-size:1.2em}footer a:active footer a:visited,footer a:hover{color:#000}@media (max-width:767px){.thumbnail{height:500px}.contactform h2{margin:0 75px 20px}.contactform ul{display:inline-block;margin:10px 50px 50px;width:250px}.contactform li{display:block;float:left;clear:both;margin-bottom:5px}.contactform .social-media{width:35px;margin-bottom:10px;margin-right:10px}.contactform form{margin:0 75px;width:100%}}@media (min-width:768px) and (max-width:992px){.thumbnail{height:575px;margin:5px -10px}.thumbnail a{display:inline-block;margin:3px 0 0}}
+html {
+ 	position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: #eee;
+}
+
+a {
+  color: #aaa;
+  text-decoration: none !important;
+  font-size: 1.3em;
+}
+
+.top a {
+  font-size: 1.5em;
+}
+
+.vertical-align {
+	display: flex;
+  align-items: center;
+}
+
+.aboutme {
+  background: url("../images/petal.jpg") fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #ccc;
+  padding-right: 1.2em;
+  margin-top: -20px;
+  margin-bottom: -10px;
+}
+
+.aboutme img {
+  width: 500px;   
+  margin: 0 auto;
+}
+
+h1 {
+  color: #eee;
+  font-size: 5em;
+	margin: 30px 0 40px 0; 
+  font-family: 'Montserrat', sans-serif;
+}
+
+.aboutme .surround {
+  border: 1px solid white;
+  padding: 5px 10px 30px 10px;
+  background-color: #111;
+  background-color: rgba(0,0,0,.8); 
+}
+
+.aboutme .social-media {
+	width: 50px;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
+.portfolio h1 {
+	color: black;
+}
+
+.thumbnail {
+	height: 475px;
+  font-size: 1.2em;
+}
+
+.thumbnail img {
+	height: 300px;
+  width: 550px;
+}
+
+.contactform {
+	background-color: black;
+  color: #ccc;
+}
+
+.contactform h2 {
+	font-size: 4em;
+	margin-bottom: 30px;
+	color: #eee;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contactform ul {
+	padding-top: 10px;
+  display: inline-block;
+}
+
+.contactform li {
+	display: block;
+	float: left;
+	clear: both;
+  margin-bottom: 5px;
+}
+
+.contactform .social-media {
+	width: 35px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.contactform a:hover, .contactform a:active, .contactform a:visited {
+  color: #eee;
+}
+
+form {
+  font-size: 1.2em;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  background-color: #f5f5f5;
+  color: #777;
+  font-size: 1.5em;
+}
+
+footer .row {
+  padding-top: 15px;
+}
+
+footer nav li + li {
+ 	margin-left: 15px;
+}
+
+footer a {
+  color: #777;
+  font-size: 1.1em;
+}
+
+footer a:hover, footer a:active footer a:visited {
+  color: black;
+}
+
+@media (max-width: 767px) {
+  .thumbnail {
+    height: 500px;
+  }
+
+  .contactform h2 {
+    margin: 0 75px 20px 75px;
+  }
+
+  .contactform ul {
+    display: inline-block;
+    margin: 10px 50px 50px 50px;
+    width: 250px;
+  }
+
+  .contactform li {
+    display: block;
+    float: left;
+    clear: both;
+    margin-bottom: 5px;
+  }
+
+  .contactform .social-media {
+    width: 35px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  .contactform form {
+    margin: 0 75px;
+    width: 100%;
+  }  
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .thumbnail {
+    height: 575px;
+    margin: 5px -10px;
+  }
+
+  .thumbnail a {
+    display: inline-block;
+    margin: 3px 0 0 0;
+  }
+}
