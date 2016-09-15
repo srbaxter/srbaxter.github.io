@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Required meta tags always come first -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Savanna Baxter is a front-end developer who graduated from North Carolina State University with a degree in Computer Science. Her portfolio and social media pages as well as contact information are shown. Please contact her if interested in hiring her.">
     <meta name="author" content="Savanna Baxter">
@@ -26,7 +28,7 @@
     <meta name="twitter:site" content="@srosebaxter">
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
@@ -52,37 +54,30 @@
     
   </head>
 
-  <body class="text-center">
+  <body class="text-xs-center">
     <header id="about" class="top">
-      <nav class="navbar navbar-inverse navbar-static-top">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#about">About</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>            
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!--/.container-->
-      </nav>
+      <nav class="navbar navbar-static-top navbar-dark bg-inverse">
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+        <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">      
+          <ul class="nav navbar-nav pull-xs-right">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>    
     </header>
     
     <section>
       <div class="jumbotron aboutme">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-6">
-              <img src="images/sav.jpg" class="img-circle img-responsive" alt="Picture of Savanna">
+            <div class="col-xs-12 col-lg-6">
+              <img src="images/sav.jpg" class="img-circle img-fluid" alt="Picture of Savanna">
             </div>
-            <div class="col-md-6 surround">
+            <div class="col-xs-12 col-lg-6 surround">
               <h1><strong>Savanna Baxter</strong></h1>
               <p class="lead">I graduated from North Carolina State University in May 2016 with a B.S. in Computer Science and a Minor in Music - Liberal Arts. After completing my second internship the summer before my senior year, I decided to focus my career on web development and design and have been learning these skills on my own ever since.<br><br>
               I am currently seeking a job as a Front-end Developer! Please see my portfolio below as well as my social media pages and contact me if interested.</p>
@@ -102,80 +97,74 @@
     <section>
       <div class="container-fluid portfolio">
         <h1 id="portfolio"><strong>Portfolio</strong></h1>
-        <div class="row">
-          <div class="col-sm-4 col-md-4">
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          <div class="card">
+            <img src="images/tennisscorecard.JPG" class="card-img-top img-fluid m-x-auto" alt="Tennis Score Board Project Image">
+            <div class="card-block">
+              <h3 class="card-title">Tennis Score Board</h3>
+              <p class="card-text">Keeps track of a tennis match score with vanilla JS. Based on no-ad scoring and best 2/3 sets won.</p> 
+              <a href="https://codepen.io/srbaxter/full/kXVEdX" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on CodePen</a>              
+              <a href="https://github.com/srbaxter/TennisScoreBoard" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on GitHub</a> 
+            </div>
+          </div>   
+          <div class="card">
+            <img src="images/udemysignup.JPG" class="card-img-top img-fluid m-x-auto" alt="Sign Up Form Project Image">
+            <div class="card-block">
+              <h3 class="card-title">Sign Up Form</h3>
+              <p class="card-text">Expanded upon HTML5/CSS3 search bar and form.</p> 
+              <a href="http://codepen.io/srbaxter/full/XKpmPX/" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on CodePen</a>
+              <a href="https://github.com/srbaxter/Udemy-form" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on GitHub</a>
+            </div>
+          </div>            
+          <div class="card">
+            <img src="images/zenvadashboard.JPG" class="card-img-top img-fluid m-x-auto" alt="Basic Dashboard Project Image">
+            <div class="card-block">
+              <h3 class="card-title">Dashboard</h3>
+              <p class="card-text">Basic HTML/CSS to create a dashboard. Partly responsive.</p> 
+              <a href="http://codepen.io/srbaxter/full/JKGbmM/" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on CodePen</a>
+              <a href="https://github.com/srbaxter/Zenva_HTML-CSS_Dashboard" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on GitHub</a> 
+            </div>
+          </div>                    
+        </div> <!-- /.col -->
 
-            <div class="thumbnail">
-              <img src="images/tennisscorecard.JPG" class="img-thumbnail img-responsive" alt="Tennis Score Board Project Image">
-              <div class="caption">
-                <h3>Tennis Score Board</h3>
-                <p>Keeps track of a tennis match score with vanilla JS. Based on 0-15-30-40-game scoring and best 2/3 sets won.</p> 
-                <a href="https://codepen.io/srbaxter/full/kXVEdX" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on CodePen</a>              
-                <a href="https://github.com/srbaxter/TennisScoreBoard" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on GitHub</a> 
-              </div>
-            </div>   
-            <div class="thumbnail">
-              <img src="images/udemysignup.JPG" class="img-thumbnail img-responsive" alt="Sign Up Form Project Image">
-              <div class="caption">
-                <h3>Sign Up Form</h3>
-                <p>Expanded upon HTML5/CSS3 search bar and form.</p> 
-                <a href="http://codepen.io/srbaxter/full/XKpmPX/" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on CodePen</a>
-                <a href="https://github.com/srbaxter/Udemy-form" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on GitHub</a>
-              </div>
-            </div>                       
-            <div class="thumbnail">
-              <img src="images/zenvadashboard.JPG" class="img-thumbnail img-responsive" alt="Basic Dashboard Project Image">
-              <div class="caption">
-                <h3>Dashboard</h3>
-                <p>Basic HTML/CSS to create a dashboard. Partly responsive.</p> 
-                <a href="http://codepen.io/srbaxter/full/JKGbmM/" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on CodePen</a>
-                <a href="https://github.com/srbaxter/Zenva_HTML-CSS_Dashboard" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on GitHub</a> 
-              </div>
-            </div>      
-          </div> <!-- /.col -->
-
-          <div class="col-sm-4 col-md-4">
-
-            <div class="thumbnail">
-              <img src="images/moviesearch.JPG" class="img-thumbnail img-responsive" alt="Movie Search Project Image">
-              <div class="caption">
-                <h3>Movie Search</h3>
-                <p>Search for movies via the OMDB API. Uses jQuery Mobile for the styling.</p> 
-                <a href="https://github.com/srbaxter/MovieSearch" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on GitHub</a> 
-              </div>
-            </div>                              
-            <div class="thumbnail">
-              <img src="images/keypadchecker.JPG" class="img-thumbnail img-responsive" alt="Keypad Checker Project Image">
-              <div class="caption">
-                <h3>Keypad Checker</h3>
-                <p>Keypad code checker. Mostly focused on JavaScript.</p> 
-                <a href="http://codepen.io/srbaxter/full/BzjQYE/" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on CodePen</a>
-                <a href="https://github.com/srbaxter/IronYard_June2_Keypad" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on GitHub</a>
-              </div>
-            </div>                                   
-          </div> <!-- /.col -->
-
-          <div class="col-sm-4 col-md-4">
-
-            <div class="thumbnail">
-              <img src="images/sasinteractivedashboard.jpg" class="img-thumbnail img-responsive" alt="SAS Interactive Dashboard Project Image">
-              <div class="caption">
-                <h3>SAS Interactive Dashboard</h3>
-                <p>Interactive, dynamic donut charts showing network connections among SAS services. Uses Python, HTML, CSS, JavaScript, and D3.js.</p> 
-              </div>
-            </div>              
-            <div class="thumbnail">
-              <img src="images/zebra.JPG" class="img-thumbnail img-responsive" alt="Zebra Portfolio Project Image">
-              <div class="caption">
-                <h3>Zebra Site</h3>
-                <p>Re-creation of a personal site for a zebra based on a Girl Develop It HTML5/CSS3 course.</p> 
-                <a href="http://codepen.io/srbaxter/full/QEdwrN/" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on CodePen</a>
-                <a href="https://github.com/srbaxter/GDI_Zebra" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on GitHub</a>
-              </div>
-            </div>             
-                                           
-          </div><!--/.col-->
-        </div> <!--/.row-->
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          <div class="card">
+            <img src="images/moviesearch.JPG" class="card-img-top img-fluid m-x-auto" alt="Movie Search Project Image">
+            <div class="card-block">
+              <h3 class="card-title">Movie Search</h3>
+              <p class="card-text">Search for movies via the OMDB API. Uses jQuery Mobile for the styling.</p> 
+              <a href="https://github.com/srbaxter/MovieSearch" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on GitHub</a> 
+            </div>
+          </div>                                                         
+          <div class="card">
+            <img src="images/keypadchecker.JPG" class="card-img-top img-fluid m-x-auto" alt="Keypad Checker Project Image">
+            <div class="card-block">
+              <h3 class="card-title">Keypad Checker</h3>
+              <p class="card-text">Keypad code checker. Mostly focused on JavaScript.</p> 
+              <a href="http://codepen.io/srbaxter/full/BzjQYE/" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on CodePen</a>
+              <a href="https://github.com/srbaxter/IronYard_June2_Keypad" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on GitHub</a>
+            </div>
+          </div>          
+        </div> <!-- /.col -->
+       
+        <div class="col-xs-12 col-md-6 col-lg-4">    
+          <div class="card">
+            <img src="images/sasinteractivedashboard.jpg" class="card-img-top img-fluid m-x-auto" alt="SAS Interactive Dashboard Project Image">
+            <div class="card-block">
+              <h3 class="card-title">SAS Interactive Dashboard</h3>
+              <p class="card-text">Interactive, dynamic donut charts showing network connections among SAS services. Uses Python, HTML, CSS, JavaScript, and D3.js.</p> 
+            </div>
+          </div>       
+          <div class="card">
+            <img src="images/zebra.JPG" class="card-img-top img-fluid m-x-auto" alt="Zebra Portfolio Project Image">
+            <div class="card-block">
+              <h3 class="card-title">Zebra Site</h3>
+              <p class="card-text">Re-creation of a personal site for a zebra based on a Girl Develop It HTML5/CSS3 course.</p> 
+              <a href="http://codepen.io/srbaxter/full/QEdwrN/" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on CodePen</a>
+              <a href="https://github.com/srbaxter/GDI_Zebra" target="_blank" rel="noopener" class="btn btn-primary" role="button">View on GitHub</a>
+            </div>
+          </div>                     
+        </div> <!-- /.col -->                                                
       </div><!--/.portfolio container-->
     </section>
 
@@ -183,7 +172,7 @@
       <div class="container-fluid contactform">
         <h1 id="contact"><strong>Contact Me</strong></h1>    
         <div class="row">
-          <div class="col-xs-6 col-md-6">
+          <div class="col-xs-12 col-md-6">
             <h2><strong>Social Media</strong></h2>
             <ul class="list-unstyled">
               <li><a href="pdfs/Savanna Baxter Resume.pdf" target="_blank" rel="noopener"><img src="images/resume.png" class="social-media" alt="Resume link"/>View my Resume</a></li>
@@ -196,29 +185,29 @@
           </div>
 
           <!-- Add the extra clearfix for only the required viewport -->
-          <div class="clearfix visible-xs-block"></div>
+          <div class="clearfix hidden-md-up hidden-md-down"></div>
 
-          <div class="col-xs-5 col-md-5">
+          <div class="col-xs-12 col-md-5">
               <h2><strong>Email Me</strong></h2>
-              <form action="mailto:srosebaxter@gmail.com" class="text-left"> 
+              <form action="mailto:srosebaxter@gmail.com" class="text-xs-left"> 
               <div class="row">
-                <div class="form-group col-xs-12 col-md-6">
+                <div class="form-group col-xs-8 col-md-6">
                   <label for="name">Name</label>
                   <input type="text" class="form-control" name="name" id="name">
                 </div>
-                <div class="form-group col-xs-12 col-md-6"">
+                <div class="form-group col-xs-8 col-md-6"">
                   <label for="email">Email</label>
                   <input type="email" class="form-control" name="email">
                 </div>
-                <div class="form-group col-xs-12 col-md-12">
+                <div class="form-group col-xs-8 col-md-12">
                   <label for="subject">Subject</label>
                   <input type="text" class="form-control" name="subject">
                 </div>
-                <div class="form-group col-xs-12 col-md-12">
+                <div class="form-group col-xs-8 col-md-12">
                   <label for="msg">Message</label>
                   <textarea class="form-control" name="msg" rows="5" cols="50" form="form"></textarea>
                 </div>
-                <div class="form-group col-xs-2 col-md-2">
+                <div class="form-group col-xs-6 col-md-2">
                   <button type="submit" class="btn btn-default">Send</button>
                 </div>
               </form>     
@@ -228,22 +217,22 @@
       </div><!--/.contactform-->
     </section>
 
-    <footer class="footer">
+    <footer class="footer w-100">
       <div class="container-fluid">
         <div class="row vertical-align">
-          <div class="col-xs-4 col-md-4">
+          <div class="col-xs-3">
             <p class="text-muted">&copy; 2016 Savanna Baxter</p>  
           </div>
-          <div class="col-xs-4 col-md-4">
-            <nav>          
-              <ul class="list-unstyled list-inline">
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>            
-                <li><a href="#contact">Contact</a></li>
+          <div class="col-xs-5">
+            <nav class="nav nav-inline">          
+              <ul class="list-unstyled">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>            
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
               </ul>
             </nav>        
           </div>
-          <div class="col-xs-4 col-md-4">
+          <div class="col-xs-4">
             <div class="realtimeuserscounter realtimeuserscounter--styled"></div>   
           </div>
         </div>
@@ -253,8 +242,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>    
     <!-- Real-time user counter in footer -->
     <script src="https://realtimeusers.bycontrast.co/realtimeusers.js"></script>
   </body>
