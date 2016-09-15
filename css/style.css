@@ -51,7 +51,7 @@ a {
 
 h1 {
   color: #eee;
-  font-size: 5em;
+  font-size: 4.5em;
   margin: 50px 0 40px 0; 
   font-family: 'Montserrat', sans-serif;
 }
@@ -64,9 +64,9 @@ h1 {
 }
 
 .aboutme .social-media {
-  width: 50px;
+  width: 2.5em;
   margin-top: 25px;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .portfolio h1 {
@@ -78,7 +78,7 @@ h1 {
   width: 100%;
   height: 26em;
   font-size: 1.2em;
-  margin: 0 auto;
+  margin-bottom: 15px;
 }
 
 .card-title {
@@ -94,21 +94,22 @@ h1 {
 .contactform {
   background-color: black;
   color: #ccc;
+  padding-bottom: 50px;
 }
 
 .contactform h1 {
   padding-top: 50px;
+  margin-bottom: 50px;
 }
 
 .contactform h2 {
   font-size: 4em;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   color: #eee;
   font-family: 'Montserrat', sans-serif;
 }
 
 .contactform ul {
-  padding-top: 10px;
   display: inline-block;
 }
 
@@ -116,7 +117,7 @@ h1 {
   display: block;
   float: left;
   clear: both;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .contactform .social-media {
@@ -164,31 +165,36 @@ footer a:hover, footer a:active footer a:visited {
 
 
 
-@media (max-width: 767px) {
+@media (max-width: 543px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  .aboutme .social-media {
+    width: 1.8em;
+    margin-left: 10px;
+  }
+
   .surround {
     margin-top: 15px;
   }
 
   .card {
-    height: 34em;
+    height: 35em;
     max-width: 20em;
     width: 100%;   
     margin: 25px auto; 
   }
 
   .card a {
-    display: inline-block;
-    margin: 8px 0 0 0;
+    display: block;
+    margin-top: 8px;
   }  
-
-  .contactform h2 {
-    margin: 0 75px 20px 75px;
-  }
 
   .contactform ul {
     display: inline-block;
-    margin: 10px 50px 50px 50px;
-    width: 250px;
+    width: 17em;
+    margin-bottom: 50px;
   }
 
   .contactform li {
@@ -205,13 +211,44 @@ footer a:hover, footer a:active footer a:visited {
   }
 
   .contactform form {
-    margin: 0 75px;
+    margin: 0 50px;
     width: 100%;
   }  
 
-  footer nav li + li {
-    margin-left: 0;
+  .footer {
+    font-size: 1em;
+  }
+  
+}
+
+@media (min-width: 544px) and (max-width: 767px) {
+  .aboutme img {
+    width: 20em;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  .card {
+    height: 30em;
+    max-width: 20em;
+    width: 100%;   
+    margin: 0 auto; 
+    margin-bottom: 15px;
+  }
+
+  .card a {
+    display: block;
+    margin-top: 8px;
   }  
+
+  .contactform form {
+    margin: 0 50px;
+    width: 100%;
+  }    
+
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -220,14 +257,15 @@ footer a:hover, footer a:active footer a:visited {
   }
 
   .card {
-    height: 35em;
+    height: 32em;
     margin: 0 auto;
+    margin-bottom: 15px;
     max-width: 20em;
     width: 100%;    
   }
 
   .card a {
-    display: inline-block;
-    margin: 3px 0 0 0;
-  }
+    display: block;
+    margin-top: 8px;
+  }  
 }
