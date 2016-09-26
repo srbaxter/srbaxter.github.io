@@ -76,9 +76,29 @@ h1 {
 .card {
   max-width: 100%;
   width: 100%;
-  height: 26em;
-  font-size: 1.2em;
+  height: 23em;
+  font-size: 1.5em;
   margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardcaption {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgb(5, 5, 5);
+  background: rgba(5, 5, 5, 0.9);
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+  display: none;
+  color: #fff;
+  z-index: 2;
+}
+
+.card-block {
+  line-height: 1.9em;
 }
 
 .card-title {
@@ -86,9 +106,20 @@ h1 {
   font-weight: bold;
 }
 
+.card a {
+  display: block;
+  margin: 15px auto;
+  width: 45%;  
+  font-size: .8em;  
+}
+
 .card img {
-  height: 15em;
+  height: 17em;
   width: 100%;
+}
+
+.card > .card-block > .card-title {
+  margin-top: 10px;
 }
 
 .contactform {
@@ -167,7 +198,11 @@ footer a:hover, footer a:active footer a:visited {
 
 @media (max-width: 543px) {
   h1 {
-    font-size: 4em;
+    font-size: 3.5em;
+  }
+
+  .aboutme img {
+    width: 15em;
   }
 
   .aboutme .social-media {
@@ -176,19 +211,28 @@ footer a:hover, footer a:active footer a:visited {
   }
 
   .surround {
-    margin-top: 15px;
+    margin: 15px 0 -15px 0;
+    font-size: .7em;
   }
 
+  .portfolio h1 {
+    margin: 30px 0 -5px 0;
+  }  
+
   .card {
-    height: 35em;
-    max-width: 20em;
-    width: 100%;   
-    margin: 25px auto; 
+    height: 26em; 
+    margin: 25px auto;
+    font-size: 1.2em; 
   }
 
   .card a {
-    display: block;
-    margin-top: 8px;
+    width: 70%;
+    font-size: 1em;
+  }  
+
+  .contactform h2 {
+    font-size: 3em;
+    margin-bottom: 25px;
   }  
 
   .contactform ul {
@@ -222,50 +266,57 @@ footer a:hover, footer a:active footer a:visited {
 }
 
 @media (min-width: 544px) and (max-width: 767px) {
+  h1 {
+    font-size: 4em;
+  }  
+
   .aboutme img {
     width: 20em;
     margin-bottom: 10px;
   }
 
-  h1 {
-    font-size: 4em;
+  .surround {
+    font-size: .7em;
   }
 
   .card {
-    height: 30em;
-    max-width: 20em;
-    width: 100%;   
-    margin: 0 auto; 
+    height: 24em; 
     margin-bottom: 15px;
   }
 
   .card a {
-    display: block;
-    margin-top: 8px;
+    width: 70%;
   }  
 
+  .contactform h2 {
+    font-size: 3em;
+    margin: 25px 0;
+  }    
+
   .contactform form {
-    margin: 0 50px;
+    margin: 0 100px 0 100px;
     width: 100%;
   }    
 
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+  .aboutme img {
+    width: 25em;   
+    margin: 0 auto;
+  }
+
   .surround {
     margin-top: 15px;
+    font-size: .7em;
   }
 
   .card {
-    height: 32em;
-    margin: 0 auto;
+    height: 26em;
     margin-bottom: 15px;
-    max-width: 20em;
-    width: 100%;    
   }
 
   .card a {
-    display: block;
-    margin-top: 8px;
+    width: 70%;
   }  
 }
