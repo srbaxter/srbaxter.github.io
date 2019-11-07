@@ -1,325 +1,252 @@
-html {
-  position: relative;
-  min-height: 100%;
+/* all purpose styles  */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  background-color: #eee;
+	background-color: #eee;
 }
 
 a {
-  color: #aaa;
-  text-decoration: none !important;
-  font-size: 1.3em;
-}
-
-.navbar-dark {
-  background-color: rgb(34,34,34) !important;
-}
-
-.top a {
-  font-size: 1.5em;
-  margin-left: .5em;
-}
-
-.vertical-align {
-  display: flex;
-  align-items: center;
-}
-
-.aboutme {
-  background: url("../images/petal.jpg") fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  color: #ccc;
-  padding-right: 1.2em;
-  margin-top: -1em;
-  margin-bottom: -.5em;
-}
-
-.aboutme .lead {
-  font-size: 1.5em;
-}
-
-.aboutme img {
-  width: 34em;   
-  margin: 0 auto;
+	color: #aaa;
+	text-decoration: none;
 }
 
 h1 {
-  color: #eee;
-  font-size: 4.5em;
-  margin: 50px 0 40px 0; 
-  font-family: 'Montserrat', sans-serif;
+	color: #eee;
+	font-size: 3em;
+	margin: 25px 0; 
+	font-family: 'Montserrat', sans-serif;
 }
 
-.aboutme .surround {
-  border: 1px solid white;
-  padding: 5px 10px 30px 10px;
-  background-color: #111;
-  background-color: rgba(0,0,0,.8); 
+ul {
+	list-style-type: none;
 }
 
-.aboutme .social-media {
-  width: 2.5em;
-  margin-top: 25px;
-  margin-left: 15px;
+nav ul {
+	display: flex;
 }
 
-.portfolio h1 {
-  color: black;
+li a:hover {
+	color: white;
 }
 
-.card {
-  max-width: 100%;
-  width: 100%;
-  height: 23em;
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  position: relative;
-  overflow: hidden;
+.container {
+	display: grid;
 }
 
-.cardcaption {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: rgb(5, 5, 5);
-  background: rgba(5, 5, 5, 0.9);
-  width: 100%;
-  height: 100%;
-  padding: 2%;
-  display: none;
-  color: #fff;
-  z-index: 2;
+/* top navigation */
+header {
+	grid-column: 1 / 4;
+	background-color: rgb(34,34,34);
+	color: #ccc;
+	padding: 20px 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;	
+	position: sticky;
 }
 
-.card-block {
-  line-height: 1.9em;
+header nav li {
+    margin-right: 15px;
 }
 
-.card-title {
-  font-size: 2em;
-  font-weight: bold;
+/* about me section */
+.jumbotron {
+	grid-column: 1 / 4;
+	color: #ccc;
+	background: url("../images/petal.jpg") fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
+	padding: 25px;	
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
 }
 
-.card a {
-  display: block;
-  margin: 15px auto;
-  width: 45%;  
-  font-size: .8em;  
+.jumboimg {
+	flex: 33%;
 }
 
-.card img {
-  height: 17em;
-  width: 100%;
+.jumboimg > img {
+	border-radius: 50%;
+	height: 20em;
 }
 
-.card > .card-block > .card-title {
-  margin-top: 10px;
+.surround {
+	flex: 66%;
+	border: 1px solid white;
+	background-color: rgba(0,0,0,.8); 	
+	padding: 0 10px 20px 10px;
+}
+
+.surround p {
+	font-size: 1.2em;
+	width: 50em;
+	margin: 0 auto;
+}
+
+.surround img {
+	height: 2em;	
+	margin: 20px 5px 0 5px;
+}
+
+
+/* contact and social media section */
+.contact {
+	color: #ccc;
+	background-color: black;	
+}
+
+.contact h2 {
+	color: #eee;
+	margin-bottom: 25px;
+	clear: both;
+}
+
+.contactsection {
+	grid-column: 1 / 4;
+	text-align: center;
+}
+
+.socialmedia {
+	grid-column: 1 / 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;	
+	font-size: 2em;
+	padding-bottom: 2em;
+}
+
+.socialmedia ul {
+	padding-top: -20em;
+}
+
+.socialmedia li {
+	margin-bottom: 20px;	
+}
+
+.socialmedia ul li a img {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;	
+	vertical-align: middle;
 }
 
 .contactform {
-  background-color: black;
-  color: #ccc;
-  padding-bottom: 50px;
+	grid-column: 2 / 4;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;	
+	font-size: 2em;
+	padding-bottom: 2em;
 }
 
-.contactform h1 {
-  padding-top: 50px;
-  margin-bottom: 50px;
+/* .contactform {
+	grid-column: 3 / 4;
+	display: grid;
+	grid-template-columns: auto auto;
+} */
+
+
+.contactform .form label {
+	display: block;
+	margin-bottom: 5px;
 }
 
-.contactform h2 {
-  font-size: 4em;
-  margin-bottom: 50px;
-  color: #eee;
-  font-family: 'Montserrat', sans-serif;
+.contactform .form div input, textarea {
+    color: #000; 
+	border: 1px solid black; 	
+	border-radius: 5px;
+	width: 100%;  
+	padding: 10px;
+
+    /* border-radius: 1px; 
+    width: 100%;  
+
+    margin-top:10px;
+    margin-bottom: 10px; 
+    padding: 10px; */
 }
 
-.contactform ul {
-  display: inline-block;
+.form button {
+	display: inline-block;
+	font-weight: 400;
+	line-height: 1.25;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border: 1px solid transparent;
+	padding: .5rem 1rem;
+	font-size: 1rem;
+	border-radius: .25rem;
 }
 
-.contactform li {
-  display: block;
-  float: left;
-  clear: both;
-  margin-bottom: 10px;
-}
 
-.contactform .social-media {
-  width: 35px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-}
-
-.contactform a:hover, .contactform a:active, .contactform a:visited {
-  color: #eee;
-}
-
-form {
-  font-size: 1.2em;
-}
-
-.footer {
-  position: absolute;
-  /* Set the fixed height of the footer here */
-  background-color: #f5f5f5;
-  color: #777;
-  font-size: 1.5em;
-}
-
-footer .row {
-  padding-top: .5em;
+/* bottom navigation and copyright */
+footer {
+	grid-column: 1 / 4;
+	grid-row: 10 / 11;
+	padding: 20px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
+	color: #777;
+	background-color: #f5f5f5;
 }
 
 footer nav li {
-  display: inline;
-}
-
-footer nav li + li {
-  margin-left: .5em;
-}
-
-footer a {
-  color: #777;
-  font-size: 1em;
+    margin-right: 15px;
 }
 
 footer a:hover, footer a:active footer a:visited {
-  color: black;
+	color: black;
 }
 
 
 
-@media (max-width: 543px) {
-  h1 {
-    font-size: 3.5em;
-  }
+/* mobile */
+@media screen and (max-width: 700px) {
+	.jumbotron {   
+		flex-direction: column;
+  	}
 
-  .aboutme img {
-    width: 15em;
-  }
+	.surround {
+		margin-top: 2em;
+		font-size: .9em;
+	}
 
-  .aboutme .social-media {
-    width: 2.4em;
-  }
+	.surround p {
+		max-width: 100%;
+		width: 100%;
+	}
 
-  .surround {
-    margin: 15px 0 -15px 0;
-    font-size: .7em;
-  }
+	.socialmedia {
+		grid-column: 1 / 4;
+	}
 
-  .portfolio h1 {
-    margin: 30px 0 -5px 0;
-  }  
+	.contactform {
+		grid-column: 1 / 4;
+	}
 
-  .card {
-    height: 26em; 
-    margin: 25px auto;
-    font-size: 1.2em; 
-  }
+	footer {
+		flex-direction: column;
+	}
 
-  .card a {
-    width: 70%;
-    font-size: 1em;
-  }  
-
-  .contactform h2 {
-    font-size: 3em;
-    margin-bottom: 25px;
-  }  
-
-  .contactform ul {
-    display: inline-block;
-    width: 17em;
-    margin-bottom: 50px;
-  }
-
-  .contactform li {
-    display: block;
-    float: left;
-    clear: both;
-    margin-bottom: 5px;
-  }
-
-  .contactform .social-media {
-    width: 35px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-  }
-
-  .contactform form {
-    margin: 0 50px;
-    width: 100%;
-  }  
-
-  .footer {
-    font-size: 1em;
-  }
-  
-}
-
-@media (min-width: 544px) and (max-width: 767px) {
-  h1 {
-    font-size: 4em;
-  }  
-
-  .aboutme img {
-    width: 20em;
-    margin-bottom: 10px;
-  }
-
-  .surround {
-    font-size: .7em;
-  }
-
-  .aboutme .social-media {
-    width: 3em;
-  }  
-
-  .card {
-    height: 24em; 
-    margin-bottom: 15px;
-  }
-
-  .card a {
-    width: 70%;
-  }  
-
-  .contactform h2 {
-    font-size: 3em;
-    margin: 25px 0;
-  }    
-
-  .contactform form {
-    margin: 0 100px 0 100px;
-    width: 100%;
-  }    
-
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .aboutme img {
-    width: 25em;   
-    margin: 0 auto;
-  }
-
-  .surround {
-    margin-top: 15px;
-    font-size: .7em;
-  }
-
-  .card {
-    height: 26em;
-    margin-bottom: 15px;
-  }
-
-  .card a {
-    width: 70%;
-  }  
+	footer nav li {
+		margin: 10px 5px;
+	}	
 }
