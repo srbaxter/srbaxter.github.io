@@ -1,4 +1,4 @@
 # srbaxter.github.io
 
 * For personal site showcasing my work and contact information
-* Currently using Bootstrap 4
+* Uses CSS Grid, Flexbox, and CSS3 keyframes

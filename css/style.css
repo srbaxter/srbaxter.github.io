@@ -1,325 +1,465 @@
-html {
-  position: relative;
-  min-height: 100%;
+/* all purpose styles  */
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 body {
-  background-color: #eee;
+	background-color: #eee;
+	font-family: "Segoe UI",Arial,sans-serif;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1, Firefox < 16, IE, Opera < 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 a {
-  color: #aaa;
-  text-decoration: none !important;
-  font-size: 1.3em;
-}
-
-.navbar-dark {
-  background-color: rgb(34,34,34) !important;
-}
-
-.top a {
-  font-size: 1.5em;
-  margin-left: .5em;
-}
-
-.vertical-align {
-  display: flex;
-  align-items: center;
-}
-
-.aboutme {
-  background: url("../images/petal.jpg") fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  color: #ccc;
-  padding-right: 1.2em;
-  margin-top: -1em;
-  margin-bottom: -.5em;
-}
-
-.aboutme .lead {
-  font-size: 1.5em;
-}
-
-.aboutme img {
-  width: 34em;   
-  margin: 0 auto;
+	color: #aaa;
+	text-decoration: none;
 }
 
 h1 {
-  color: #eee;
-  font-size: 4.5em;
-  margin: 50px 0 40px 0; 
-  font-family: 'Montserrat', sans-serif;
+	color: #eee;
+	font-size: 3em;
+	margin: 25px 0; 
+	font-family: 'Montserrat', sans-serif;
 }
 
-.aboutme .surround {
-  border: 1px solid white;
-  padding: 5px 10px 30px 10px;
-  background-color: #111;
-  background-color: rgba(0,0,0,.8); 
+ul {
+	list-style-type: none;
 }
 
-.aboutme .social-media {
-  width: 2.5em;
-  margin-top: 25px;
-  margin-left: 15px;
+nav ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 
-.portfolio h1 {
-  color: black;
+li a:hover {
+	color: white;
 }
 
-.card {
-  max-width: 100%;
-  width: 100%;
-  height: 23em;
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  position: relative;
-  overflow: hidden;
+.container {
+	display: grid;
 }
 
-.cardcaption {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: rgb(5, 5, 5);
-  background: rgba(5, 5, 5, 0.9);
-  width: 100%;
-  height: 100%;
-  padding: 2%;
-  display: none;
-  color: #fff;
-  z-index: 2;
+
+/* top navigation */
+header {
+	grid-column: 1 / 4;
+	background-color: rgb(34,34,34);
+	color: #ccc;
+	padding: 20px 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;	
+	position: -webkit-sticky;	
+	position: sticky;
+	font-size: 1.5em;
 }
 
-.card-block {
-  line-height: 1.9em;
+header nav li:last-child {
+	margin-right: 15px;
 }
 
-.card-title {
-  font-size: 2em;
-  font-weight: bold;
+header nav li + li {
+	margin-left: 15px;
 }
 
-.card a {
-  display: block;
-  margin: 15px auto;
-  width: 45%;  
-  font-size: .8em;  
+
+/* about me section */
+.jumbotron {
+	grid-column: 1 / 4;
+	color: #ccc;
+	background: url("../images/petal.jpg") fixed;
+	-ms-background-size: cover;
+	background-size: cover;	
+	padding: 25px;	
+	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;	
 }
 
-.card img {
-  height: 17em;
-  width: 100%;
+.jumboimg {
+	-webkit-box-flex: 33%;
+	    -ms-flex: 33%;
+	        flex: 33%;
 }
 
-.card > .card-block > .card-title {
-  margin-top: 10px;
+.jumboimg > img {
+	border-radius: 50%;
+	height: 20em;
+}
+
+.surround {
+	-webkit-box-flex: 66%;
+	    -ms-flex: 66%;
+	        flex: 66%;
+	border: 1px solid white;
+	background-color: rgba(0,0,0,.8); 	
+	padding: 0 10px 20px 10px;
+}
+
+.surround p {
+	font-size: 1.2em;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.surround img {
+	height: 2em;	
+	margin: 20px 5px 0 5px;
+}
+
+
+/* portfolio section */
+.portfoliosection h1 {
+	color: black;
+}
+
+.portfoliosection {
+	grid-column: 1 / 4;
+	text-align: center;
+}
+
+.cards {
+	grid-column: 1 / 4;
+	grid-template-columns: repeat(3,1fr);
+	display: grid;
+	grid-gap: 1rem;	
+	width: 99%;
+	text-align: center;
+	margin: 0 auto 50px auto;
+}
+  
+.cards .card {
+	background-color: white;
+	font-size: 1.5em;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 150px;
+	        flex: 1 1 150px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	position: relative;
+	-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	        box-shadow: 0 2px 5px rgba(0,0,0,0.1);	
+	min-height: 100%;
+	max-height: 400px;
+	height: 400px;
+}
+
+.cards .card:hover {
+	top: -2px;
+	-webkit-box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+	        box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
+
+.cards .card .card-title {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.cards .card .cardcaption {
+	background: rgb(5, 5, 5);
+	background: rgba(5, 5, 5, 0.9);		
+	color: #fff;
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;	
+	z-index: 2;	
+	width: 100%;
+	height: 100%;	
+	padding: 2%;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;		
+	line-height: 2em;	
+}
+
+.cards .card .cardcaption a {
+	color: #fff;
+	background-color: #0275d8;
+	border-color: #0275d8;
+	border-radius: .25rem;
+	padding: 15px;
+	margin: 15px;	
+	font-size: 1rem;
+	cursor: pointer;	
+}
+
+.cards .card .cardcaption a:hover {
+	background-color: #025aa5;
+	border-color: #01549b;
+}
+
+.cards .card:hover > .cardcaption {
+	display: block;
+	/* Safari, Chrome and Opera > 12.1, Firefox < 16, IE, Opera < 12.1 */
+    -webkit-animation: fadein .5s; 
+		animation: fadein .5s;	
+}  
+
+.cards .card img {
+	max-width: 100%;
+	max-height: 75%;
+	height: 75%;
+	background-size: cover;
+	background-position: center center;
+}
+
+.cards .card .card-block {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+}
+
+
+/* contact and social media section */
+.contact {
+	color: #ccc;
+	background-color: black;	
+}
+
+.contact h1 {
+	color: #eee;
+	margin-bottom: 25px;
+	clear: both;
+}
+
+.contactsection {
+	grid-column: 1 / 4;
+	text-align: center;
+}
+
+.socialmedia {
+	grid-column: 1 / 2;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;	
+	padding-bottom: 2em;
+}
+
+.socialmedia > h1 {
+	margin-bottom: 1.2em;
+}
+
+.socialmedia li {
+	margin-bottom: 20px;	
+	font-size: 1.5em;
+}
+
+.socialmedia ul li a img {
+	width: 35px;
+	height: 35px;
+	margin-right: 10px;	
+	vertical-align: middle;
 }
 
 .contactform {
-  background-color: black;
-  color: #ccc;
-  padding-bottom: 50px;
+	grid-column: 2 / 4;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;	
+	padding-bottom: 2em;
 }
 
-.contactform h1 {
-  padding-top: 50px;
-  margin-bottom: 50px;
+.contactform .form label {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 1.5em;
 }
 
-.contactform h2 {
-  font-size: 4em;
-  margin-bottom: 50px;
-  color: #eee;
-  font-family: 'Montserrat', sans-serif;
+.contactform .form div input, textarea {
+    color: #000; 
+	border: 1px solid black; 	
+	border-radius: 5px;
+	width: 100%;  
+	padding: 10px;
 }
 
-.contactform ul {
-  display: inline-block;
+.form button {
+	display: inline-block;
+	font-weight: 400;
+	line-height: 1.25;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border: 1px solid transparent;
+	padding: .5rem 1rem;
+	font-size: 1rem;
+	border-radius: .25rem;
 }
 
-.contactform li {
-  display: block;
-  float: left;
-  clear: both;
-  margin-bottom: 10px;
-}
 
-.contactform .social-media {
-  width: 35px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-}
-
-.contactform a:hover, .contactform a:active, .contactform a:visited {
-  color: #eee;
-}
-
-form {
-  font-size: 1.2em;
-}
-
-.footer {
-  position: absolute;
-  /* Set the fixed height of the footer here */
-  background-color: #f5f5f5;
-  color: #777;
-  font-size: 1.5em;
-}
-
-footer .row {
-  padding-top: .5em;
-}
-
-footer nav li {
-  display: inline;
+/* bottom navigation and copyright */
+footer {
+	grid-column: 1 / 4;
+	padding: 20px 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;	
+	color: #777;
+	background-color: #f5f5f5;
+	font-size: 1.5em;
+	text-align: center;
 }
 
 footer nav li + li {
-  margin-left: .5em;
+	margin-left: .5em;
 }
 
 footer a {
-  color: #777;
-  font-size: 1em;
+	color: #777;
 }
 
 footer a:hover, footer a:active footer a:visited {
-  color: black;
+	color: black;
 }
 
 
+/* tablet */
+@media (max-width: 1250px) { 
+	/* about me */
+	.jumbotron {   
+		-webkit-box-orient: vertical;   
+		-webkit-box-direction: normal;   
+		    -ms-flex-direction: column;   
+		        flex-direction: column;
+	}
 
-@media (max-width: 543px) {
-  h1 {
-    font-size: 3.5em;
-  }
+	.surround {
+		margin-top: 2em;
+	}	
 
-  .aboutme img {
-    width: 15em;
-  }
-
-  .aboutme .social-media {
-    width: 2.4em;
-  }
-
-  .surround {
-    margin: 15px 0 -15px 0;
-    font-size: .7em;
-  }
-
-  .portfolio h1 {
-    margin: 30px 0 -5px 0;
-  }  
-
-  .card {
-    height: 26em; 
-    margin: 25px auto;
-    font-size: 1.2em; 
-  }
-
-  .card a {
-    width: 70%;
-    font-size: 1em;
-  }  
-
-  .contactform h2 {
-    font-size: 3em;
-    margin-bottom: 25px;
-  }  
-
-  .contactform ul {
-    display: inline-block;
-    width: 17em;
-    margin-bottom: 50px;
-  }
-
-  .contactform li {
-    display: block;
-    float: left;
-    clear: both;
-    margin-bottom: 5px;
-  }
-
-  .contactform .social-media {
-    width: 35px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-  }
-
-  .contactform form {
-    margin: 0 50px;
-    width: 100%;
-  }  
-
-  .footer {
-    font-size: 1em;
-  }
-  
+	/* portfolio */
+	.cards {
+		grid-template-columns: repeat(2,1fr);
+	}			
 }
 
-@media (min-width: 544px) and (max-width: 767px) {
-  h1 {
-    font-size: 4em;
-  }  
+/* mobile */
+@media (max-width: 992px) {
+	/* top navigation */
+	header {
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
 
-  .aboutme img {
-    width: 20em;
-    margin-bottom: 10px;
-  }
+	header nav li:last-child {
+		margin-right: 0;
+	}
 
-  .surround {
-    font-size: .7em;
-  }
+	/* about me */  
+	.jumboimg > img {
+		height: 15em;
+	}	  
 
-  .aboutme .social-media {
-    width: 3em;
-  }  
+	/* portfolio */
+	.cards {
+		grid-template-columns: repeat(1,1fr);
+	}
 
-  .card {
-    height: 24em; 
-    margin-bottom: 15px;
-  }
+	.cards .card {
+		max-height: 400px;
+		height: 400px;
+		font-size: 1.1em;
+		width: 90%;
+		margin: 0 auto;		
+	}	
 
-  .card a {
-    width: 70%;
-  }  
+	.cards .card .cardcaption a {
+		display: block;
+		width: 50%;
+		padding: 10px;
+		margin: 15px auto;
+	}	
 
-  .contactform h2 {
-    font-size: 3em;
-    margin: 25px 0;
-  }    
 
-  .contactform form {
-    margin: 0 100px 0 100px;
-    width: 100%;
-  }    
+	/* contact me */
+	.socialmedia > h1, .contactform > h1 {
+		font-size: 2.5em;
+	}
 
-}
+	.socialmedia {
+		grid-column: 1 / 4;
+	}
 
-@media (min-width: 768px) and (max-width: 992px) {
-  .aboutme img {
-    width: 25em;   
-    margin: 0 auto;
-  }
+	.contactform {
+		grid-column: 1 / 4;
+	}
 
-  .surround {
-    margin-top: 15px;
-    font-size: .7em;
-  }
+	.contactform form {
+		width: 75%;
+	}
 
-  .card {
-    height: 26em;
-    margin-bottom: 15px;
-  }
+	
+	/* bottom navigation */
+	footer {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
 
-  .card a {
-    width: 70%;
-  }  
+	footer nav li {
+		margin: 10px 5px;
+	}	
 }
