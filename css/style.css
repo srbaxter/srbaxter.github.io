@@ -2,11 +2,13 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 body {
 	background-color: #eee;
+	font-family: "Segoe UI",Arial,sans-serif;
 }
 
 @keyframes fadein {
@@ -14,26 +16,8 @@ body {
     to   { opacity: 1; }
 }
 
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
+/* Safari, Chrome and Opera > 12.1, Firefox < 16, IE, Opera < 12.1 */
 @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
@@ -55,6 +39,8 @@ ul {
 }
 
 nav ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -66,41 +52,60 @@ li a:hover {
 	display: grid;
 }
 
+
 /* top navigation */
 header {
 	grid-column: 1 / 4;
 	background-color: rgb(34,34,34);
 	color: #ccc;
 	padding: 20px 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-end;
-	align-items: center;	
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;	
+	position: -webkit-sticky;	
 	position: sticky;
+	font-size: 1.5em;
 }
 
-header nav li {
-    margin-right: 15px;
+header nav li:last-child {
+	margin-right: 15px;
 }
+
+header nav li + li {
+	margin-left: 15px;
+}
+
 
 /* about me section */
 .jumbotron {
 	grid-column: 1 / 4;
 	color: #ccc;
 	background: url("../images/petal.jpg") fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
 	-ms-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;	
 	padding: 25px;	
 	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;	
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;	
 }
 
 .jumboimg {
-	flex: 33%;
+	-webkit-box-flex: 33%;
+	    -ms-flex: 33%;
+	        flex: 33%;
 }
 
 .jumboimg > img {
@@ -109,7 +114,9 @@ header nav li {
 }
 
 .surround {
-	flex: 66%;
+	-webkit-box-flex: 66%;
+	    -ms-flex: 66%;
+	        flex: 66%;
 	border: 1px solid white;
 	background-color: rgba(0,0,0,.8); 	
 	padding: 0 10px 20px 10px;
@@ -117,7 +124,7 @@ header nav li {
 
 .surround p {
 	font-size: 1.2em;
-	width: 50em;
+	width: 90%;
 	margin: 0 auto;
 }
 
@@ -139,20 +146,39 @@ header nav li {
 
 .cards {
 	grid-column: 1 / 4;
-	text-align: center;
-	display: grid;
 	grid-template-columns: repeat(3,1fr);
-	grid-gap: 1rem;
-	margin-bottom: 50px;
+	display: grid;
+	grid-gap: 1rem;	
+	width: 99%;
+	text-align: center;
+	margin: 0 auto 50px auto;
 }
   
 .cards .card {
 	background-color: white;
 	font-size: 1.5em;
-	flex: 1 1 150px;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 150px;
+	        flex: 1 1 150px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	position: relative;
+	-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	        box-shadow: 0 2px 5px rgba(0,0,0,0.1);	
+	min-height: 100%;
+	max-height: 400px;
+	height: 400px;
+}
+
+.cards .card:hover {
+	top: -2px;
+	-webkit-box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+	        box-shadow: 0 4px 5px rgba(0,0,0,0.2);
 }
 
 .cards .card .card-title {
@@ -172,7 +198,9 @@ header nav li {
 	width: 100%;
 	height: 100%;	
 	padding: 2%;
-	align-items: center;		
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;		
 	line-height: 2em;	
 }
 
@@ -194,17 +222,17 @@ header nav li {
 
 .cards .card:hover > .cardcaption {
 	display: block;
-    -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein .5s; /* Firefox < 16 */
-        -ms-animation: fadein .5s; /* Internet Explorer */
-         -o-animation: fadein .5s; /* Opera < 12.1 */
-			animation: fadein .5s;	
+	/* Safari, Chrome and Opera > 12.1, Firefox < 16, IE, Opera < 12.1 */
+    -webkit-animation: fadein .5s; 
+		animation: fadein .5s;	
 }  
 
 .cards .card img {
 	max-width: 100%;
 	max-height: 75%;
 	height: 75%;
+	background-size: cover;
+	background-position: center center;
 }
 
 .cards .card .card-block {
@@ -222,7 +250,7 @@ header nav li {
 	background-color: black;	
 }
 
-.contact h2 {
+.contact h1 {
 	color: #eee;
 	margin-bottom: 25px;
 	clear: both;
@@ -235,20 +263,26 @@ header nav li {
 
 .socialmedia {
 	grid-column: 1 / 2;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;	
-	font-size: 1.5em;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;	
 	padding-bottom: 2em;
 }
 
-/* .socialmedia ul {
-	padding-top: -20em;
-} */
+.socialmedia > h1 {
+	margin-bottom: 1.2em;
+}
 
 .socialmedia li {
 	margin-bottom: 20px;	
+	font-size: 1.5em;
 }
 
 .socialmedia ul li a img {
@@ -260,24 +294,26 @@ header nav li {
 
 .contactform {
 	grid-column: 2 / 4;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;	
-	font-size: 1.5em;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;	
 	padding-bottom: 2em;
 }
-
-/* .contactform {
-	grid-column: 3 / 4;
-	display: grid;
-	grid-template-columns: auto auto;
-} */
-
 
 .contactform .form label {
 	display: block;
 	margin-bottom: 5px;
+	font-size: 1.5em;
 }
 
 .contactform .form div input, textarea {
@@ -286,13 +322,6 @@ header nav li {
 	border-radius: 5px;
 	width: 100%;  
 	padding: 10px;
-
-    /* border-radius: 1px; 
-    width: 100%;  
-
-    margin-top:10px;
-    margin-bottom: 10px; 
-    padding: 10px; */
 }
 
 .form button {
@@ -317,17 +346,27 @@ header nav li {
 /* bottom navigation and copyright */
 footer {
 	grid-column: 1 / 4;
-	grid-row: 10 / 11;
 	padding: 20px 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;	
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;	
 	color: #777;
 	background-color: #f5f5f5;
+	font-size: 1.5em;
+	text-align: center;
 }
 
-footer nav li {
-    margin-right: 15px;
+footer nav li + li {
+	margin-left: .5em;
+}
+
+footer a {
+	color: #777;
 }
 
 footer a:hover, footer a:active footer a:visited {
@@ -335,21 +374,68 @@ footer a:hover, footer a:active footer a:visited {
 }
 
 
-
-/* mobile */
-@media screen and (max-width: 700px) {
+/* tablet */
+@media (max-width: 1250px) { 
+	/* about me */
 	.jumbotron {   
-		flex-direction: column;
-  	}
+		-webkit-box-orient: vertical;   
+		-webkit-box-direction: normal;   
+		    -ms-flex-direction: column;   
+		        flex-direction: column;
+	}
 
 	.surround {
 		margin-top: 2em;
-		font-size: .9em;
+	}	
+
+	/* portfolio */
+	.cards {
+		grid-template-columns: repeat(2,1fr);
+	}			
+}
+
+/* mobile */
+@media (max-width: 992px) {
+	/* top navigation */
+	header {
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 
-	.surround p {
-		max-width: 100%;
-		width: 100%;
+	header nav li:last-child {
+		margin-right: 0;
+	}
+
+	/* about me */  
+	.jumboimg > img {
+		height: 15em;
+	}	  
+
+	/* portfolio */
+	.cards {
+		grid-template-columns: repeat(1,1fr);
+	}
+
+	.cards .card {
+		max-height: 400px;
+		height: 400px;
+		font-size: 1.1em;
+		width: 90%;
+		margin: 0 auto;		
+	}	
+
+	.cards .card .cardcaption a {
+		display: block;
+		width: 50%;
+		padding: 10px;
+		margin: 15px auto;
+	}	
+
+
+	/* contact me */
+	.socialmedia > h1, .contactform > h1 {
+		font-size: 2.5em;
 	}
 
 	.socialmedia {
@@ -360,8 +446,17 @@ footer a:hover, footer a:active footer a:visited {
 		grid-column: 1 / 4;
 	}
 
+	.contactform form {
+		width: 75%;
+	}
+
+	
+	/* bottom navigation */
 	footer {
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 	}
 
 	footer nav li {
