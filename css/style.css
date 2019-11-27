@@ -354,7 +354,7 @@ header nav li + li {
 footer {
 	grid-column: 1 / 4;
 	grid-row: 7 / 8;
-	padding: 20px 20px;
+	padding: 20px 500px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -370,7 +370,7 @@ footer {
 }
 
 footer nav li + li {
-	margin-left: .5em;
+	margin-left: 1em;
 }
 
 footer a {
@@ -399,7 +399,11 @@ footer a:hover, footer a:active footer a:visited {
 	/* portfolio */
 	.cards {
 		grid-template-columns: repeat(2,1fr);
-	}			
+	}	
+	
+	footer {
+		padding: 20px 20px;
+	}
 }
 
 /* tablet - support IE a little better */
