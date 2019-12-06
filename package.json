@@ -16,8 +16,8 @@
     "build:css": "npm run cssprefix && npm run cssmin",
     "build:js": "npm run uglify",
     "build:img": "npm run imagemin",
-    "prebuild": "npm run clean",
-    "build": "npm run prebuild && npm run build:css && npm run build:js && npm run build:img"
+    "build": "npm run build:css && npm run build:js && npm run build:img",
+    "prebuild": "npm run clean"
   },
   "repository": {
     "type": "git",
