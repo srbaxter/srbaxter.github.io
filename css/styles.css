@@ -88,7 +88,7 @@ header nav li + li {
 	grid-column: 1 / 4;
 	grid-row: 2 / 3;
 	color: #ccc;
-	background: url("../images/petal.jpg") fixed;
+	background: url("../img/petal.jpg") fixed;
 	-ms-background-size: cover;
 	background-size: cover;	
 	padding: 25px;	
