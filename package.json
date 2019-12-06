@@ -1,13 +1,13 @@
 {
   "name": "srbaxter.github.io",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Savanna's personal portfolio site",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "version:major": "npm version major", 
-    "version:minor": "npm version minor", 
-    "version:patch": "npm version patch", 
+    "version:major": "npm version major",
+    "version:minor": "npm version minor",
+    "version:patch": "npm version patch",
     "cssprefix": "postcss css/*.css -u autoprefixer -d dist/css/",
     "cssmin": "cleancss -o dist/css/styles.min.css dist/css/styles.css",
     "uglify": "uglifyjs -o dist/js/scripts.min.js js/scripts.js",
