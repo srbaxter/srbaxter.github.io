@@ -12,7 +12,7 @@
     "watch:css": "onchange 'css/*.css' -- npm run build:css",
     "watch:js": "onchange 'js/*.js' -- npm run build:js",
     "watch": "npm-run-all --parallel watch:*",
-    "clean": "rimraf dist\\css && rimraf dist\\js && rimraf dist\\img && rimraf dist && mkdir dist && mkdir dist\\css && mkdir dist\\js && mkdir dist\\img",
+    "clean": "rimraf dist/* && rimraf dist && mkdir dist && mkdir dist\\css && mkdir dist\\js && mkdir dist\\img",
     "build:css": "npm run cssprefix && npm run cssmin",
     "build:js": "npm run uglify",
     "build:img": "npm run imagemin",
