@@ -4,7 +4,8 @@
   "description": "Savanna's personal portfolio site",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "watch:test": "npm run test -- --watch",
     "version:major": "npm version major",
     "version:minor": "npm version minor",
     "version:patch": "npm version patch",
@@ -20,7 +21,7 @@
     "build:css": "npm run csslint && npm run cssprefix && npm run cssmin",
     "build:js": "npm run uglify",
     "build:img": "npm run imagemin",
-    "build": "npm run build:css && npm run build:js && npm run build:img",
+    "build": "npm run build:css && npm run build:js && npm run build:img && npm run test",
     "prebuild": "npm run clean",
     "push:origin": "git push --tags origin HEAD:master"
   },
@@ -45,6 +46,7 @@
     "autoprefixer": "^9.7.3",
     "clean-css-cli": "^4.3.0",
     "imagemin-cli": "^5.0.0",
+    "jest": "^24.9.0",
     "npm-run-all": "^4.1.5",
     "onchange": "^6.1.0",
     "postcss-cli": "^6.1.3",
