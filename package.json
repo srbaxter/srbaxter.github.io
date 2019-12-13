@@ -10,13 +10,14 @@
     "version:patch": "npm version patch",
     "cssprefix": "postcss css/*.css -u autoprefixer -d dist/css/",
     "cssmin": "cleancss -o dist/css/styles.min.css dist/css/styles.css",
+    "csslint": "stylelint \"css/**/*.css\" --fix",
     "uglify": "uglifyjs -o dist/js/scripts.min.js js/scripts.js",
     "imagemin": "imagemin --out-dir=dist/img images/**/*.*",
-    "watch:css": "onchange 'css/*.css' -- npm run build:css",
-    "watch:js": "onchange 'js/*.js' -- npm run build:js",
+    "watch:css": "onchange \"css/**/*.css\" -- npm run build:css",
+    "watch:js": "onchange \"js/**/*.js\" -- npm run build:js",
     "watch": "npm-run-all --parallel watch:*",
     "clean": "rimraf dist/* && rimraf dist && mkdir dist && mkdir dist\\css && mkdir dist\\js && mkdir dist\\img",
-    "build:css": "npm run cssprefix && npm run cssmin",
+    "build:css": "npm run csslint && npm run cssprefix && npm run cssmin",
     "build:js": "npm run uglify",
     "build:img": "npm run imagemin",
     "build": "npm run build:css && npm run build:js && npm run build:img",
@@ -48,6 +49,8 @@
     "onchange": "^6.1.0",
     "postcss-cli": "^6.1.3",
     "rimraf": "^3.0.0",
+    "stylelint": "^12.0.0",
+    "stylelint-config-recommended": "^3.0.0",
     "uglify-js": "^3.7.1"
   }
 }
