@@ -25,7 +25,7 @@ body {
 h1 {
 	color: #eee;
 	font-size: 3em;
-	margin: 25px 0; 
+	margin: 25px 0;
 }
 
 ul {
@@ -71,8 +71,8 @@ header {
 	        justify-content: flex-end;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
-	        align-items: center;	
-	position: -webkit-sticky;	
+	        align-items: center;
+	position: -webkit-sticky;
 	position: sticky;
 	font-size: 1.5em;
 }
@@ -89,8 +89,8 @@ header li:last-child {
 	color: #ccc;
 	background: url("../img/petal.jpg") fixed;
 	-ms-background-size: cover;
-	background-size: cover;	
-	padding: 25px;	
+	background-size: cover;
+	padding: 25px;
 	text-align: center;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -100,7 +100,7 @@ header li:last-child {
 	        justify-content: space-between;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
-	        align-items: center;	
+	        align-items: center;
 }
 
 .jumboimg {
@@ -119,7 +119,7 @@ header li:last-child {
 	    -ms-flex: 66%;
 	        flex: 66%;
 	border: 1px solid white;
-	background-color: rgba(0,0,0,.8); 	
+	background-color: rgba(0,0,0,.8);
 	padding: 0 10px 20px 10px;
 	width: 100%;
 }
@@ -131,7 +131,7 @@ header li:last-child {
 }
 
 .surround img {
-	height: 2em;	
+	height: 2em;
 	margin: 20px 5px 0 5px;
 }
 
@@ -152,12 +152,12 @@ header li:last-child {
 	grid-row: 4 / 5;
 	grid-template-columns: repeat(3,1fr);
 	display: grid;
-	grid-gap: 1rem;	
+	grid-gap: 1rem;
 	width: 99%;
 	text-align: center;
 	margin: 0 auto 50px auto;
 }
-  
+
 .cards .card {
 	background-color: white;
 	font-size: 1.5em;
@@ -173,7 +173,7 @@ header li:last-child {
 	        flex-direction: column;
 	position: relative;
 	-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-	        box-shadow: 0 2px 5px rgba(0,0,0,0.1);	
+	        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 	min-height: 100%;
 	max-height: 400px;
 	height: 400px;
@@ -192,20 +192,20 @@ header li:last-child {
 
 .cardcaption {
 	background: rgb(5, 5, 5);
-	background: rgba(5, 5, 5, 0.9);		
+	background: rgba(5, 5, 5, 0.9);
 	color: #fff;
 	display: none;
 	position: absolute;
 	top: 0;
-	right: 0;	
-	z-index: 2;	
+	right: 0;
+	z-index: 2;
 	width: 100%;
-	height: 100%;	
+	height: 100%;
 	padding: 2%;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
-	        align-items: center;		
-	line-height: 2em;	
+	        align-items: center;
+	line-height: 2em;
 }
 
 .cardcaption a {
@@ -214,17 +214,17 @@ header li:last-child {
 	border-color: #0275d8;
 	border-radius: .25rem;
 	padding: 15px;
-	margin: 15px;	
+	margin: 15px;
 	font-size: 1rem;
-	cursor: pointer;	
+	cursor: pointer;
 }
 
 .cards .card:hover > .cardcaption {
 	display: block;
 	/* Safari, Chrome and Opera > 12.1, Firefox < 16, IE, Opera < 12.1 */
-    -webkit-animation: fadein .5s; 
-		animation: fadein .5s;	
-}  
+    -webkit-animation: fadein .5s;
+		animation: fadein .5s;
+}
 
 .card img {
 	max-width: 100%;
@@ -245,7 +245,7 @@ header li:last-child {
 /* contact and social media section */
 .contact {
 	color: #ccc;
-	background-color: black;	
+	background-color: black;
 }
 
 .contact h1 {
@@ -273,7 +273,7 @@ header li:last-child {
 	        flex-direction: column;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
-	        align-items: center;	
+	        align-items: center;
 	padding-bottom: 2em;
 }
 
@@ -282,18 +282,18 @@ header li:last-child {
 }
 
 .socialmedia ul li {
-	margin-bottom: 20px;	
+	margin-bottom: 20px;
 	font-size: 1.5em;
 }
 
 .socialmedia li + li {
-	margin-left: 0;	
+	margin-left: 0;
 }
 
 .socialmedia ul li a img {
 	width: 35px;
 	height: 35px;
-	margin-right: 10px;	
+	margin-right: 10px;
 	vertical-align: middle;
 }
 
@@ -312,7 +312,7 @@ header li:last-child {
 	        justify-content: space-between;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
-	        align-items: center;	
+	        align-items: center;
 	padding-bottom: 2em;
 }
 
@@ -323,10 +323,10 @@ header li:last-child {
 }
 
 .contactform .form div input, textarea {
-    color: #000; 
-	border: 1px solid black; 	
+    color: #000;
+	border: 1px solid black;
 	border-radius: 5px;
-	width: 100%;  
+	width: 100%;
 	padding: 10px;
 }
 
@@ -361,7 +361,7 @@ footer {
 	    justify-content: space-around;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
-	        align-items: center;	
+	        align-items: center;
 	background-color: rgb(34,34,34);
 	color: #aaa;
 	font-size: 1.5em;
@@ -371,24 +371,24 @@ footer {
 
 
 /* tablet */
-@media (max-width: 1250px) { 
+@media (max-width: 1250px) {
 	/* about me */
-	.jumbotron {   
-		-webkit-box-orient: vertical;   
-		-webkit-box-direction: normal;   
-		    -ms-flex-direction: column;   
+	.jumbotron {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
 		        flex-direction: column;
 	}
 
 	.surround {
 		margin-top: 2em;
-	}	
+	}
 
 	/* portfolio */
 	.cards {
 		grid-template-columns: repeat(2,1fr);
-	}	
-	
+	}
+
 	footer {
 		padding: 20px 20px;
 	}
@@ -401,8 +401,8 @@ footer {
 	}
 	.surround {
 		margin-top: 10em;
-	}	
-}	
+	}
+}
 
 /* mobile */
 @media (max-width: 992px) {
@@ -413,10 +413,10 @@ footer {
 		        justify-content: center;
 	}
 
-	/* about me */  
+	/* about me */
 	.jumboimg > img {
 		height: 15em;
-	}	  
+	}
 
 	/* portfolio */
 	.cards {
@@ -428,15 +428,15 @@ footer {
 		height: 400px;
 		font-size: 1.1em;
 		width: 90%;
-		margin: 0 auto;		
-	}	
+		margin: 0 auto;
+	}
 
 	.cards .card .cardcaption a {
 		display: block;
 		width: 50%;
 		padding: 10px;
 		margin: 15px auto;
-	}	
+	}
 
 
 	/* contact me */
@@ -458,7 +458,7 @@ footer {
 		width: 75%;
 	}
 
-	
+
 	/* bottom navigation */
 	footer {
 		-webkit-box-orient: vertical;
@@ -470,7 +470,7 @@ footer {
 
 	footer li {
 		margin: 10px;
-	}	
+	}
 
 }
 

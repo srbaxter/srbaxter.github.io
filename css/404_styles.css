@@ -1,0 +1,186 @@
+/* all purpose styles  */
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+body {
+	background-color: #eee;
+	font-family: "Segoe UI", Arial, sans-serif;
+}
+
+h1 {
+	color: #eee;
+	font-size: 3em;
+	margin: 25px 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+nav ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+li + li {
+	margin-left: 1em;
+}
+
+a {
+	color: #aaa;
+	text-decoration: none;
+}
+
+a:hover {
+	color: white;
+}
+
+.container {
+	display: grid;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+}
+
+
+/* top navigation */
+header {
+	grid-column: 1 / 4;
+	grid-row: 1 / 2;
+	background-color: rgb(34,34,34);
+	color: #ccc;
+	padding: 0 10px 0 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	font-size: 1.5em;
+}
+
+
+/* about me section */
+.jumbotron {
+	grid-column: 1 / 4;
+	grid-row: 2 / 7;
+	color: #ccc;
+	background: url("../img/petal.jpg") fixed;
+	-ms-background-size: cover;
+	background-size: cover;
+	padding: 25px;
+	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.surround {
+	-webkit-box-flex: 66%;
+	    -ms-flex: 66%;
+	        flex: 66%;
+	border: 1px solid white;
+	background-color: rgba(0,0,0,.8);
+	padding: 0 10px 20px 10px;
+	width: 100%;
+}
+
+.surround p {
+	font-size: 1.2em;
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+/* bottom navigation and copyright */
+footer {
+	grid-column: 1 / 4;
+	grid-row: 7 / 8;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	background-color: rgb(34,34,34);
+	color: #aaa;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+
+
+/* tablet */
+@media (max-width: 1250px) {
+	/* about me */
+	.jumbotron {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+
+	.surround {
+		margin-top: 2em;
+	}
+
+	footer {
+		padding: 20px 20px;
+	}
+}
+
+/* tablet - support IE a little better */
+@media (max-width: 1250px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.jumbotron {
+		height: 50em;
+	}
+	.surround {
+		margin-top: 10em;
+	}
+}
+
+/* mobile */
+@media (max-width: 992px) {
+	/* top navigation */
+	header {
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+
+	/* bottom navigation */
+	footer {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+				flex-direction: column;
+	}
+}
+
+/* mobile - support IE a little better */
+@media (max-width: 992px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.jumbotron {
+		height: 60em;
+	}
+
+	.surround {
+		margin-top: -5em;
+	}
+}
