@@ -22,7 +22,7 @@ body {
     to   { opacity: 1; }
 }
 
-h1 {
+h1, h2 {
 	color: #eee;
 	font-size: 3em;
 	margin: 25px 0;
@@ -137,7 +137,7 @@ header li:last-child {
 
 
 /* portfolio section */
-.portfoliosection h1 {
+.portfoliosection h2 {
 	color: black;
 }
 
@@ -248,7 +248,7 @@ header li:last-child {
 	background-color: black;
 }
 
-.contact h1 {
+.contact h2 {
 	color: #eee;
 	margin-bottom: 25px;
 	clear: both;
@@ -277,7 +277,7 @@ header li:last-child {
 	padding-bottom: 2em;
 }
 
-.socialmedia > h1 {
+.socialmedia > h2 {
 	margin-bottom: 1.2em;
 }
 
@@ -440,7 +440,7 @@ footer {
 
 
 	/* contact me */
-	.socialmedia > h1, .contactform > h1 {
+	.socialmedia > h2, .contactform > h2 {
 		font-size: 2.5em;
 	}
 
